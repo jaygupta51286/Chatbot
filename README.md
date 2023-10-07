@@ -1,61 +1,73 @@
-![Binaryhood](Logo/BinaryhoodLogo.png)
+# ChatBot Setup Guide
 
-# ChatBot
+## Installation & Configuration
 
-## Installation & Setup
+To set up the ChatBot application, follow these steps:
 
-[Install Python] https://www.dataquest.io/blog/installing-python-on-mac/
+1. **Install Python:**
+   - First, make sure you have Python installed on your system. If not, you can download and install it from [Python Official Website](https://www.python.org/downloads/).
 
-[Install pip] https://phoenixnap.com/kb/install-pip-mac
+2. **Install pip:**
+   - Pip is a package manager for Python. If you don't have it installed, you can follow the instructions in this [guide](https://phoenixnap.com/kb/install-pip-mac) to install pip on your Mac.
 
-If you have Python & pip installed then check their version in the terminal or command line tools
+3. **Check Python and Pip Versions:**
+   - Open your terminal or command line tool and check the installed versions of Python and pip using the following commands:
+     ```
+     python3 --version
+     pip --version
+     ```
 
-```
-python3 --version
-```
+## Installing Flask and Dependencies
 
-```
-pip --version
-```
+4. **Install Flask and Dependencies:**
+   - In your terminal, navigate to the project directory where you have the `requirements.txt` file.
+   - Run the following command to install the required packages using pip:
+     ```
+     pip install -r requirements.txt
+     ```
 
-## Installing Flask
+## Running the ChatBot Application
 
-In your terminal run the requirements.txt file using this pip
+5. **Run the ChatBot Application:**
+   - After installing the required dependencies, navigate to your project directory in the terminal:
+     ```
+     cd /path/to/your/directory
+     ```
+   - Start the ChatBot application by running the following command:
+     ```
+     python app.py
+     ```
 
-```
-pip install -r requirements.txt
-```
+## What You Will Create
 
+In this tutorial, you'll build a chatbot that can engage in conversations with users using natural language processing. You'll use Microsoft DialoGPT, a pre-trained language model, and integrate it with Flask to create a web application with a chat interface.
 
-## Running ChatBot Application in Terminal
+For the frontend, you'll use HTML, CSS, and JavaScript to create an interactive chat interface. jQuery will handle HTTP requests to the backend server.
 
-```
-cd into your directory
-```
+The tutorial will provide step-by-step instructions for setting up your development environment, installing dependencies, creating necessary files, and training DialoGPT to improve response accuracy.
 
-```
-python app.py
-```
+By the end, you'll have a fully functional chatbot and valuable experience with DialoGPT, Flask, HTML, CSS, and JavaScript.
 
+# ChatBot Model
 
+The Chatbot uses the Microsoft/DialoGPT-medium model. You can find more details about this model at the following link:
 
-## What you will create
+[Microsoft/DialoGPT-medium Model](https://huggingface.co/microsoft/DialoGPT-medium)
 
-In this tutorial, I will guide you through the process of building a chatbot that can carry out conversations with users using natural language processing.
+# User HTML
 
-To start, we will be using Microsoft DialoGPT, a pre-trained language model that can generate human-like responses to given prompts. We will be integrating DialoGPT with Flask, a popular Python web framework, to create a web application that can communicate with users via a chat interface.
+```html
+var userHtml = `
+<div class="d-flex justify-content-end mb-4">
+   <div class="msg_cotainer_send">
+      ${user_input}
+      <span class="msg_time_send">${time}</span>
+   </div>
+   <div class="img_cont_msg">
+      <img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg">
+   </div>
+</div>`;
 
-For the frontend of our application, we will be using HTML, CSS, and JavaScript to create a visually appealing and interactive chat interface. Additionally, we will be using jQuery to handle the HTTP requests that are made to the backend server.
-
-Throughout the tutorial, I will provide step-by-step instructions on how to set up your development environment, install the necessary dependencies, and create the required files and code for the application. I will also explain how to train and fine-tune the DialoGPT model to improve the accuracy of its responses.
-
-By the end of this tutorial, you will have a fully functional chatbot that can engage in conversations with users, and you will have gained valuable experience in using Microsoft DialoGPT, Flask, and web development technologies such as HTML, CSS, and JavaScript.
-
-# ChatBot Link
-The Chatbot is constructed using the Microsoft/DialoGPT-medium model.
-
-```
-https://huggingface.co/microsoft/DialoGPT-medium
 ```
 
 # User-Html
